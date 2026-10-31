@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adrian Cárdenas Cardona — CV</title>
+<meta name="description" content="Currículum de Adrian Cárdenas Cardona, estudiante de Tecnologías de Información (UANL).">
+<style>
+  :root {
+    --bg: #000000;
+    --card: #111114;
+    --line: #2a2a38;
+    --text: #f4f4f8;
+    --muted: #a6a6b4;
+    --accent: #8b6fe0;
+    --accent-strong: #6a46d4;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; background: var(--bg); }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--bg);
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; }
+
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(0,0,0,.9);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 3.5rem; gap: 1rem; }
+  .logo {
+    font-family: "Brush Script MT", "Segoe Script", "Snell Roundhand", cursive;
+    font-style: italic; font-size: 1.6rem; color: var(--accent); text-decoration: none;
+  }
+  nav ul { display: flex; gap: 1.3rem; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
+  nav a { color: var(--text); text-decoration: none; font-size: .95rem; }
+  nav ul a:hover { color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+
+  .hero {
+    display: grid; grid-template-columns: 1.15fr 1fr; gap: 2rem; align-items: center;
+    padding: 3.5rem 0 2.5rem;
+  }
+  h1 { margin: 0 0 1rem; font-size: 2.6rem; line-height: 1.1; }
+  .hero p { color: var(--muted); margin: 0 0 1rem; max-width: 46ch; }
+  .art { width: 100%; height: auto; display: block; }
+  .p1 { fill: #8b6fe0; } .p2 { fill: #4c34a0; } .p3 { fill: #14093a; } .p4 { fill: #d9cdff; } .bg { fill: #000; }
+
+  section { padding: 2.2rem 0; }
+  h2 { margin: 0 0 1.3rem; font-size: 1.7rem; }
+
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.3rem; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 1.1rem 1.2rem;
+  }
+  .card h3 { margin: 0 0 .7rem; font-size: 1.02rem; }
+  .card ul.tags { display: flex; flex-wrap: wrap; gap: .45rem; list-style: none; margin: 0; padding: 0; }
+  .card ul.tags li { margin: 0;
+    border: 1.5px solid var(--accent-strong); color: var(--text);
+    border-radius: 999px; padding: .1rem .7rem; font-size: .82rem;
+  }
+
+  .timeline { position: relative; list-style: none; margin: 0; padding: 0; }
+  .timeline::before {
+    content: ""; position: absolute; left: 21px; top: 20px; bottom: 20px; width: 2px; background: var(--accent-strong);
+  }
+  .timeline > li { position: relative; display: grid; grid-template-columns: 44px 1fr; gap: 1.4rem; margin-bottom: 1.3rem; align-items: start; }
+  .dot {
+    width: 44px; height: 44px; border-radius: 50%; background: var(--accent-strong);
+    display: grid; place-items: center; font-weight: 700; font-size: .8rem; letter-spacing: .02em; position: relative;
+  }
+  .timeline .card h3 { margin: 0; }
+  .at { margin: .1rem 0 .6rem; color: var(--accent); font-size: .9rem; }
+  .card ul { margin: 0; padding-left: 1.1rem; color: #d6d6e0; font-size: .93rem; }
+  .card ul li { margin-bottom: .2rem; }
+  .edu p { margin: 0; color: #d6d6e0; }
+
+  footer { border-top: 1px solid var(--line); margin-top: 2rem; padding: 1.6rem 0 2.5rem; color: var(--muted); font-size: .92rem; }
+
+  @media (max-width: 760px) {
+    .hero { grid-template-columns: 1fr; padding-top: 2rem; }
+    .art { max-width: 320px; margin: 0 auto; order: -1; }
+    .cards { grid-template-columns: 1fr; }
+    h1 { font-size: 2.1rem; }
+    nav ul { gap: .8rem; }
+    nav a { font-size: .85rem; }
+    .logo { display: none; }
+  }
+  @media print {
+    :root { --bg:#fff; --card:#fff; --line:#bbb; --text:#000; --muted:#333; --accent:#4c34a0; }
+    html, body { background:#fff; color:#000; }
+    nav, .art { display:none; }
+    .hero { grid-template-columns: 1fr; padding: 1rem 0; }
+    .card ul { color:#000; }
+    .dot { color:#fff; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#inicio">adrian.cv</a>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#experiencia">Experiencia</a></li>
+      <li><a href="#educacion">Educación</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <div class="hero" id="inicio">
+    <div>
+      <h1>Adrian Cárdenas Cardona</h1>
+      <p>Estudiante de 4.º semestre de la Licenciatura en Tecnologías de Información (UANL), responsable, puntual y acostumbrado a trabajar bajo presión y a atender gente todo el día.</p>
+      <p>Busco empleo como repartidor o puesto similar de medio tiempo, compatible con mi horario de estudio. Tengo disponibilidad entre semana por las tardes y en fines de semana.</p>
+      <p>Nuevo León, México.</p>
+    </div>
+    <svg class="art" shape-rendering="crispEdges" viewBox="0 0 240 150" role="img" aria-label="Ilustración de pixel art de un scooter de reparto" xmlns="http://www.w3.org/2000/svg"><g transform="translate(0,8)"><rect class="p1" x="20" y="10" width="10" height="10"/><rect class="p1" x="30" y="10" width="10" height="10"/><rect class="p1" x="40" y="10" width="10" height="10"/><rect class="p1" x="50" y="10" width="10" height="10"/><rect class="p1" x="60" y="10" width="10" height="10"/><rect class="p1" x="70" y="10" width="10" height="10"/><rect class="p1" x="80" y="10" width="10" height="10"/><rect class="p1" x="90" y="10" width="10" height="10"/><rect class="p1" x="100" y="10" width="10" height="10"/><rect class="p1" x="20" y="20" width="10" height="10"/><rect class="p2" x="30" y="20" width="10" height="10"/><rect class="p2" x="40" y="20" width="10" height="10"/><rect class="p2" x="50" y="20" width="10" height="10"/><rect class="p2" x="60" y="20" width="10" height="10"/><rect class="p2" x="70" y="20" width="10" height="10"/><rect class="p2" x="80" y="20" width="10" height="10"/><rect class="p2" x="90" y="20" width="10" height="10"/><rect class="p1" x="100" y="20" width="10" height="10"/><rect class="p1" x="160" y="20" width="10" height="10"/><rect class="p1" x="170" y="20" width="10" height="10"/><rect class="p1" x="180" y="20" width="10" height="10"/><rect class="p1" x="190" y="20" width="10" height="10"/><rect class="p1" x="20" y="30" width="10" height="10"/><rect class="p2" x="30" y="30" width="10" height="10"/><rect class="p2" x="40" y="30" width="10" height="10"/><rect class="p3" x="50" y="30" width="10" height="10"/><rect class="p3" x="60" y="30" width="10" height="10"/><rect class="p3" x="70" y="30" width="10" height="10"/><rect class="p2" x="80" y="30" width="10" height="10"/><rect class="p2" x="90" y="30" width="10" height="10"/><rect class="p1" x="100" y="30" width="10" height="10"/><rect class="p1" x="170" y="30" width="10" height="10"/><rect class="p1" x="180" y="30" width="10" height="10"/><rect class="p1" x="20" y="40" width="10" height="10"/><rect class="p2" x="30" y="40" width="10" height="10"/><rect class="p2" x="40" y="40" width="10" height="10"/><rect class="p2" x="50" y="40" width="10" height="10"/><rect class="p2" x="60" y="40" width="10" height="10"/><rect class="p2" x="70" y="40" width="10" height="10"/><rect class="p2" x="80" y="40" width="10" height="10"/><rect class="p2" x="90" y="40" width="10" height="10"/><rect class="p1" x="100" y="40" width="10" height="10"/><rect class="p1" x="170" y="40" width="10" height="10"/><rect class="p1" x="180" y="40" width="10" height="10"/><rect class="p4" x="190" y="40" width="10" height="10"/><rect class="p4" x="200" y="40" width="10" height="10"/><rect class="p1" x="20" y="50" width="10" height="10"/><rect class="p1" x="30" y="50" width="10" height="10"/><rect class="p1" x="40" y="50" width="10" height="10"/><rect class="p1" x="50" y="50" width="10" height="10"/><rect class="p1" x="60" y="50" width="10" height="10"/><rect class="p1" x="70" y="50" width="10" height="10"/><rect class="p1" x="80" y="50" width="10" height="10"/><rect class="p1" x="90" y="50" width="10" height="10"/><rect class="p1" x="100" y="50" width="10" height="10"/><rect class="p1" x="170" y="50" width="10" height="10"/><rect class="p1" x="180" y="50" width="10" height="10"/><rect class="p1" x="40" y="60" width="10" height="10"/><rect class="p1" x="50" y="60" width="10" height="10"/><rect class="p1" x="60" y="60" width="10" height="10"/><rect class="p1" x="70" y="60" width="10" height="10"/><rect class="p1" x="80" y="60" width="10" height="10"/><rect class="p1" x="90" y="60" width="10" height="10"/><rect class="p1" x="100" y="60" width="10" height="10"/><rect class="p1" x="110" y="60" width="10" height="10"/><rect class="p1" x="120" y="60" width="10" height="10"/><rect class="p1" x="130" y="60" width="10" height="10"/><rect class="p1" x="140" y="60" width="10" height="10"/><rect class="p1" x="150" y="60" width="10" height="10"/><rect class="p1" x="160" y="60" width="10" height="10"/><rect class="p1" x="170" y="60" width="10" height="10"/><rect class="p1" x="180" y="60" width="10" height="10"/><rect class="p2" x="40" y="70" width="10" height="10"/><rect class="p2" x="50" y="70" width="10" height="10"/><rect class="p2" x="60" y="70" width="10" height="10"/><rect class="p2" x="70" y="70" width="10" height="10"/><rect class="p2" x="80" y="70" width="10" height="10"/><rect class="p2" x="90" y="70" width="10" height="10"/><rect class="p2" x="100" y="70" width="10" height="10"/><rect class="p2" x="110" y="70" width="10" height="10"/><rect class="p2" x="120" y="70" width="10" height="10"/><rect class="p2" x="130" y="70" width="10" height="10"/><rect class="p2" x="140" y="70" width="10" height="10"/><rect class="p2" x="150" y="70" width="10" height="10"/><rect class="p2" x="160" y="70" width="10" height="10"/><rect class="p2" x="170" y="70" width="10" height="10"/><rect class="p1" x="40" y="80" width="10" height="10"/><rect class="p1" x="50" y="80" width="10" height="10"/><rect class="p1" x="60" y="80" width="10" height="10"/><rect class="p1" x="70" y="80" width="10" height="10"/><rect class="p1" x="160" y="80" width="10" height="10"/><rect class="p1" x="170" y="80" width="10" height="10"/><rect class="p1" x="180" y="80" width="10" height="10"/><rect class="p1" x="190" y="80" width="10" height="10"/><rect class="p1" x="30" y="90" width="10" height="10"/><rect class="p1" x="40" y="90" width="10" height="10"/><rect class="p1" x="70" y="90" width="10" height="10"/><rect class="p1" x="80" y="90" width="10" height="10"/><rect class="p1" x="150" y="90" width="10" height="10"/><rect class="p1" x="160" y="90" width="10" height="10"/><rect class="p1" x="190" y="90" width="10" height="10"/><rect class="p1" x="200" y="90" width="10" height="10"/><rect class="p1" x="30" y="100" width="10" height="10"/><rect class="p1" x="50" y="100" width="10" height="10"/><rect class="p1" x="60" y="100" width="10" height="10"/><rect class="p1" x="80" y="100" width="10" height="10"/><rect class="p1" x="150" y="100" width="10" height="10"/><rect class="p1" x="170" y="100" width="10" height="10"/><rect class="p1" x="180" y="100" width="10" height="10"/><rect class="p1" x="200" y="100" width="10" height="10"/><rect class="p1" x="30" y="110" width="10" height="10"/><rect class="p1" x="40" y="110" width="10" height="10"/><rect class="p1" x="70" y="110" width="10" height="10"/><rect class="p1" x="80" y="110" width="10" height="10"/><rect class="p1" x="150" y="110" width="10" height="10"/><rect class="p1" x="160" y="110" width="10" height="10"/><rect class="p1" x="190" y="110" width="10" height="10"/><rect class="p1" x="200" y="110" width="10" height="10"/><rect class="p1" x="40" y="120" width="10" height="10"/><rect class="p1" x="50" y="120" width="10" height="10"/><rect class="p1" x="60" y="120" width="10" height="10"/><rect class="p1" x="70" y="120" width="10" height="10"/><rect class="p1" x="160" y="120" width="10" height="10"/><rect class="p1" x="170" y="120" width="10" height="10"/><rect class="p1" x="180" y="120" width="10" height="10"/><rect class="p1" x="190" y="120" width="10" height="10"/></g><rect class="p1" x="11" y="15" width="6" height="18"/><rect class="p1" x="5" y="21" width="18" height="6"/><rect class="p1" x="224" y="11" width="5" height="15"/><rect class="p1" x="219" y="16" width="15" height="5"/><rect class="p1" x="208" y="123" width="5" height="15"/><rect class="p1" x="203" y="128" width="15" height="5"/><rect class="p2" x="20" y="100" width="12" height="12"/><rect class="bg" x="24" y="104" width="4" height="4"/><rect class="p2" x="196" y="60" width="12" height="12"/><rect class="bg" x="200" y="64" width="4" height="4"/></svg>
+  </div>
+
+  <section id="habilidades">
+    <h2>Habilidades</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Reparto</h3>
+        <ul class="tags">
+          <li>Manejo de moto</li><li>Manejo de auto</li><li>Rutas</li><li>Entregas a tiempo</li><li>Manejo de efectivo</li><li>Apps de pedidos</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Oficina</h3>
+        <ul class="tags">
+          <li>Excel</li><li>Captura de datos</li><li>Reportes</li><li>Estadística básica</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Personales</h3>
+        <ul class="tags">
+          <li>Trato al cliente</li><li>Bajo presión</li><li>Puntualidad</li><li>Responsabilidad</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="experiencia">
+    <h2>Experiencia</h2>
+    <ul class="timeline">
+      <li>
+        <div class="dot" aria-hidden="true">EB</div>
+        <div class="card">
+          <h3>Repartidor</h3>
+          <p class="at">El Buen Pastor</p>
+          <ul>
+            <li>Entrega de pedidos a domicilio en tiempo y forma.</li>
+            <li>Trato directo con clientes y manejo de efectivo al momento de la entrega.</li>
+            <li>Conocimiento de rutas y organización de entregas para ahorrar tiempo.</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="dot" aria-hidden="true">BC</div>
+        <div class="card">
+          <h3>Cajero bancario</h3>
+          <p class="at">BanCoppel</p>
+          <ul>
+            <li>Atención directa a clientes durante toda la jornada, con trato amable y rapidez.</li>
+            <li>Manejo de efectivo, cobros y cuadre de caja con precisión.</li>
+            <li>Trabajo constante bajo presión y con alto volumen de personas.</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="dot" aria-hidden="true">R2</div>
+        <div class="card">
+          <h3>Capturista</h3>
+          <p class="at">Ruta 229</p>
+          <ul>
+            <li>Captura y organización de información en Excel.</li>
+            <li>Elaboración de reportes y apoyo con estadística básica.</li>
+            <li>Atención al detalle y cumplimiento de tiempos de entrega.</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="dot" aria-hidden="true">TB</div>
+        <div class="card">
+          <h3>Operador general de manufactura</h3>
+          <p class="at">Topband</p>
+          <ul>
+            <li>Trabajo en línea de producción, siguiendo procesos y estándares de calidad.</li>
+            <li>Cumplimiento de metas en un ritmo de trabajo exigente.</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="educacion">
+    <h2>Educación</h2>
+    <div class="card edu">
+      <h3>Licenciatura en Tecnologías de Información (LTI)</h3>
+      <p class="at">UANL · FACPYA</p>
+      <p>Facultad de Contaduría Pública y Administración. Cursando 4.º semestre.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contacto">
+  <div class="wrap">
+    <strong>Contacto:</strong> disponible a solicitud.
+  </div>
+</footer>
+
+</body>
+</html>
